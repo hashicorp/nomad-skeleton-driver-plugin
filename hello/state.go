@@ -1,4 +1,4 @@
-package skeleton
+package hello
 
 import (
 	"sync"
