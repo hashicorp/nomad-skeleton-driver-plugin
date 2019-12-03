@@ -1,4 +1,4 @@
-nomad-runtime-driver-skeleton
+nomad-skeleton-driver-plugin
 ==========
 
 This project is a [Hashicorp Nomad](https://www.nomadproject.io/) [task driver
@@ -10,7 +10,7 @@ Requirements
 -------------------
 
 - [Nomad](https://www.nomadproject.io/downloads.html) v0.9.5+
-- [Go](https://golang.org/doc/install) v1.11+ (to build the plugin)
+- [Go](https://golang.org/doc/install) v1.12.x (to build the plugin)
 
 Get Started
 -------------------

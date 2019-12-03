@@ -2,7 +2,7 @@ package main
 
 import (
 	log "github.com/hashicorp/go-hclog"
-	"github.com/hashicorp/nomad-runtime-driver-skeleton/hello"
+	"github.com/hashicorp/nomad-skeleton-driver-plugin/hello"
 
 	"github.com/hashicorp/nomad/plugins"
 )
