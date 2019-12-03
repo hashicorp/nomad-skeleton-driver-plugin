@@ -1,4 +1,4 @@
-package skeleton
+package hello
 
 import (
 	"context"
@@ -7,6 +7,8 @@ import (
 	"time"
 
 	"github.com/hashicorp/go-hclog"
+	"github.com/hashicorp/go-plugin"
+	"github.com/hashicorp/nomad/drivers/shared/executor"
 	"github.com/hashicorp/nomad/plugins/drivers"
 )
 
@@ -14,17 +16,20 @@ import (
 // such as process ID if this is a local task or other meta
 // data if this driver deals with external APIs
 type taskHandle struct {
-	pid    int
-	logger hclog.Logger
-
 	// stateLock syncs access to all fields below
 	stateLock sync.RWMutex
 
-	taskConfig  *drivers.TaskConfig
-	procState   drivers.TaskState
-	startedAt   time.Time
-	completedAt time.Time
-	exitResult  *drivers.ExitResult
+	logger       hclog.Logger
+	exec         executor.Executor
+	pluginClient *plugin.Client
+	taskConfig   *drivers.TaskConfig
+	procState    drivers.TaskState
+	startedAt    time.Time
+	completedAt  time.Time
+	exitResult   *drivers.ExitResult
+
+	// TODO: add any extra relevant information about the task.
+	pid int
 }
 
 func (h *taskHandle) TaskStatus() *drivers.TaskStatus {
@@ -57,23 +62,19 @@ func (h *taskHandle) run() {
 	}
 	h.stateLock.Unlock()
 
+	// TODO: wait for your task to complete and upate its state.
+	ps, err := h.exec.Wait(context.Background())
 	h.stateLock.Lock()
 	defer h.stateLock.Unlock()
 
-	// Implement running the task here, this is driver specific
-}
-
-func (h *taskHandle) stats(ctx context.Context, interval time.Duration) (<-chan *drivers.TaskResourceUsage, error) {
-	ch := make(chan *drivers.TaskResourceUsage)
-
-	return ch, nil
-}
-
-// shutdown shuts down the container, with `timeout` grace period
-// before killing the container with SIGKILL.
-func (h *taskHandle) shutdown(timeout time.Duration) error {
-	// Implement shutdown of the task. Shutdown should be tried
-	// gracefully first. If its past the timeout, then this method
-	// should do a hard shutdown and return
-	return nil
+	if err != nil {
+		h.exitResult.Err = err
+		h.procState = drivers.TaskStateUnknown
+		h.completedAt = time.Now()
+		return
+	}
+	h.procState = drivers.TaskStateExited
+	h.exitResult.ExitCode = ps.ExitCode
+	h.exitResult.Signal = ps.Signal
+	h.completedAt = ps.Time
 }
