@@ -43,10 +43,10 @@ require (
 replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.4.2
 
 // don't use shirou/gopsutil, use the hashicorp fork
-replace github.com/shirou/gopsutil => github.com/hashicorp/gopsutil v0.0.0-20180427102116-62d5761ddb7d
+replace github.com/shirou/gopsutil => github.com/hashicorp/gopsutil v2.17.13-0.20190117153606-62d5761ddb7d+incompatible
 
 // don't use ugorji/go, use the hashicorp fork
-replace github.com/ugorji/go => github.com/hashicorp/go-msgpack v0.0.0-20190927083313-23165f7bc3c2
+replace github.com/ugorji/go => github.com/hashicorp/go-msgpack v0.0.0-20190927123313-23165f7bc3c2
 
 // fix the version of hashicorp/go-msgpack to 96ddbed8d05b
 replace github.com/hashicorp/go-msgpack => github.com/hashicorp/go-msgpack v0.0.0-20191101193846-96ddbed8d05b

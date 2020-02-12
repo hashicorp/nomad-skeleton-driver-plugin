@@ -242,6 +242,8 @@ github.com/hashicorp/go-immutable-radix v1.1.0/go.mod h1:0y9vanUI8NX6FsYoO3zeMjh
 github.com/hashicorp/go-memdb v0.0.0-20180223233045-1289e7fffe71/go.mod h1:kbfItVoBJwCfKXDXN4YoAXjxcFVZ7MRrJzyTX6H4giE=
 github.com/hashicorp/go-msgpack v0.0.0-20190927083313-23165f7bc3c2 h1:kZFZ8oAS1Rfk3QG3dgd0iiBNnOf0cQliaWZgfRz1eQw=
 github.com/hashicorp/go-msgpack v0.0.0-20190927083313-23165f7bc3c2/go.mod h1:CNnb6ZvPKQMR+Hz6QI76TRCBNgyJIxEmTBn+1u8HELw=
+github.com/hashicorp/go-msgpack v0.0.0-20190927123313-23165f7bc3c2 h1:bstaIlK2oQ3n2Fl3KlHWO2VA03+A27VQEcjm5gkmx6s=
+github.com/hashicorp/go-msgpack v0.0.0-20190927123313-23165f7bc3c2/go.mod h1:CNnb6ZvPKQMR+Hz6QI76TRCBNgyJIxEmTBn+1u8HELw=
 github.com/hashicorp/go-msgpack v0.0.0-20191101193846-96ddbed8d05b h1:lB+3FXrgs94Mz066O5Yz59m3l/O0uEsf2jPiZyUpKTU=
 github.com/hashicorp/go-msgpack v0.0.0-20191101193846-96ddbed8d05b/go.mod h1:gWVc3sv/wbDmR3rQsj1CAktEZzoz1YNK9NfGLXJ69/4=
 github.com/hashicorp/go-multierror v0.0.0-20161216184304-ed905158d874/go.mod h1:JMRHfdO9jKNzS/+BTlxCjKNQHg/jZAft8U7LloJvN7I=
@@ -275,6 +277,8 @@ github.com/hashicorp/golang-lru v0.5.3 h1:YPkqC67at8FYaadspW/6uE0COsBxS2656RLEr8
 github.com/hashicorp/golang-lru v0.5.3/go.mod h1:iADmTwqILo4mZ8BN3D2Q6+9jd8WM5uGBxy+E8yxSoD4=
 github.com/hashicorp/gopsutil v0.0.0-20180427102116-62d5761ddb7d h1:SFth5WDiMWzND4B4iAGynG5MUhlLeKPaojk8u2qMVQ0=
 github.com/hashicorp/gopsutil v0.0.0-20180427102116-62d5761ddb7d/go.mod h1:Mz8xr0ujmCW1qsmWMIUDOc+RgaN9QMvrgnBzQF12nYM=
+github.com/hashicorp/gopsutil v2.17.13-0.20190117153606-62d5761ddb7d+incompatible h1:Om/wDjV3ffJ9FzakiekRC6AGJJXlauCkns8ZKNuRcJc=
+github.com/hashicorp/gopsutil v2.17.13-0.20190117153606-62d5761ddb7d+incompatible/go.mod h1:Mz8xr0ujmCW1qsmWMIUDOc+RgaN9QMvrgnBzQF12nYM=
 github.com/hashicorp/hcl v1.0.0 h1:0Anlzjpi4vEasTeNFn2mLJgTSwt0+6sfsiTG8qcWGx4=
 github.com/hashicorp/hcl v1.0.0/go.mod h1:E5yfLk+7swimpb2L/Alb/PJmXilQ/rhwaUYs4T20WEQ=
 github.com/hashicorp/hcl2 v0.0.0-20191002203319-fb75b3253c80 h1:PFfGModn55JA0oBsvFghhj0v93me+Ctr3uHC/UmFAls=
