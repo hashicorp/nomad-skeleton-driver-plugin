@@ -18,7 +18,7 @@ Get Started
 Download the project module:
 
 ```sh
-go get github.com/hashicorp/nomad-skeleton-task-driver-plugin
+go get github.com/hashicorp/nomad-skeleton-driver-plugin
 ```
 
 Follow the comments marked with a `TODO` tag to implement your driver's logic.
