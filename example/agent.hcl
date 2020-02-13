@@ -1,6 +1,6 @@
 log_level = "TRACE"
 
-plugin "nomad-skeleton-driver-plugin" {
+plugin "hello-driver" {
   config {
     shell = "bash"
   }
