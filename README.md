@@ -49,9 +49,9 @@ match your repository path.
 package main
 
 import (
-	log "github.com/hashicorp/go-hclog"
--	"github.com/hashicorp/nomad-skeleton-driver-plugin/hello"
-+ "github.com/<REPO>/<ORG>/hello"
+    log "github.com/hashicorp/go-hclog"
+-   "github.com/hashicorp/nomad-skeleton-driver-plugin/hello"
++.  "github.com/<REPO>/<ORG>/hello"
 ...
 
 ```
