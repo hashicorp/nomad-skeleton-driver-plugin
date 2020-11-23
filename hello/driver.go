@@ -11,7 +11,6 @@ import (
 
 	"github.com/hashicorp/consul-template/signals"
 	"github.com/hashicorp/go-hclog"
-	log "github.com/hashicorp/go-hclog"
 	"github.com/hashicorp/nomad/drivers/shared/eventer"
 	"github.com/hashicorp/nomad/drivers/shared/executor"
 	"github.com/hashicorp/nomad/plugins/base"
@@ -181,11 +180,11 @@ type HelloDriverPlugin struct {
 	signalShutdown context.CancelFunc
 
 	// logger will log to the Nomad agent
-	logger log.Logger
+	logger hclog.Logger
 }
 
 // NewPlugin returns a new example driver plugin
-func NewPlugin(logger log.Logger) drivers.DriverPlugin {
+func NewPlugin(logger hclog.Logger) drivers.DriverPlugin {
 	ctx, cancel := context.WithCancel(context.Background())
 	logger = logger.Named(pluginName)
 
