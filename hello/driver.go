@@ -2,6 +2,7 @@ package hello
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"os"
 	"os/exec"
@@ -419,7 +420,7 @@ func (d *HelloDriverPlugin) StartTask(cfg *drivers.TaskConfig) (*drivers.TaskHan
 // RecoverTask recreates the in-memory state of a task from a TaskHandle.
 func (d *HelloDriverPlugin) RecoverTask(handle *drivers.TaskHandle) error {
 	if handle == nil {
-		return fmt.Errorf("error: handle cannot be nil")
+		return errors.New("error: handle cannot be nil")
 	}
 
 	if _, ok := d.tasks.Get(handle.Config.ID); ok {
@@ -552,7 +553,7 @@ func (d *HelloDriverPlugin) DestroyTask(taskID string, force bool) error {
 	}
 
 	if handle.IsRunning() && !force {
-		return fmt.Errorf("cannot destroy running task")
+		return errors.New("cannot destroy running task")
 	}
 
 	// TODO: implement driver specific logic to destroy a complete task.
@@ -635,5 +636,5 @@ func (d *HelloDriverPlugin) SignalTask(taskID string, signal string) error {
 // This is an optional capability.
 func (d *HelloDriverPlugin) ExecTask(taskID string, cmd []string, timeout time.Duration) (*drivers.ExecTaskResult, error) {
 	// TODO: implement driver specific logic to execute commands in a task.
-	return nil, fmt.Errorf("This driver does not support exec")
+	return nil, errors.New("This driver does not support exec")
 }
