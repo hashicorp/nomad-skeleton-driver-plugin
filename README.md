@@ -13,8 +13,8 @@ plugin.
 Requirements
 -------------------
 
-- [Nomad](https://www.nomadproject.io/downloads.html) v0.9+
-- [Go](https://golang.org/doc/install) v1.11 or later (to build the plugin)
+- [Go](https://golang.org/doc/install) v1.18 or later (to compile the plugin)
+- [Nomad](https://www.nomadproject.io/downloads.html) v0.9+ (to run the plugin)
 
 Building the Skeleton Plugin
 -------------------
