@@ -4,10 +4,10 @@ module github.com/hashicorp/nomad-skeleton-driver-plugin
 go 1.18
 
 require (
-	github.com/hashicorp/consul-template v0.29.1
-	github.com/hashicorp/go-hclog v1.2.1
+	github.com/hashicorp/consul-template v0.29.2-0.20220803104536-583050a85eea
+	github.com/hashicorp/go-hclog v1.2.2
 	github.com/hashicorp/go-plugin v1.4.4
-	github.com/hashicorp/nomad v1.3.1
+	github.com/hashicorp/nomad v1.3.6
 )
 
 require (
@@ -27,6 +27,7 @@ require (
 	github.com/cyphar/filepath-securejoin v0.2.3 // indirect
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
+	github.com/go-test/deep v1.0.3 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
@@ -43,6 +44,7 @@ require (
 	github.com/hashicorp/go-secure-stdlib/mlock v0.1.2 // indirect
 	github.com/hashicorp/go-secure-stdlib/parseutil v0.1.6 // indirect
 	github.com/hashicorp/go-secure-stdlib/strutil v0.1.2 // indirect
+	github.com/hashicorp/go-set v0.1.6 // indirect
 	github.com/hashicorp/go-sockaddr v1.0.2 // indirect
 	github.com/hashicorp/go-uuid v1.0.3 // indirect
 	github.com/hashicorp/go-version v1.6.0 // indirect
@@ -76,7 +78,7 @@ require (
 	github.com/power-devops/perfstat v0.0.0-20220216144756-c35f1ee13d7c // indirect
 	github.com/ryanuber/go-glob v1.0.0 // indirect
 	github.com/seccomp/libseccomp-golang v0.10.0 // indirect
-	github.com/shirou/gopsutil/v3 v3.22.6 // indirect
+	github.com/shirou/gopsutil/v3 v3.22.7 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/syndtr/gocapability v0.0.0-20200815063812-42c35b437635 // indirect
 	github.com/tklauser/go-sysconf v0.3.10 // indirect
@@ -89,12 +91,13 @@ require (
 	github.com/zclconf/go-cty v1.10.0 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	golang.org/x/crypto v0.0.0-20220622213112-05595931fe9d // indirect
+	golang.org/x/exp v0.0.0-20220921164117-439092de6870 // indirect
 	golang.org/x/mod v0.6.0-dev.0.20220419223038-86c51ed26bb4 // indirect
-	golang.org/x/net v0.0.0-20220708220712-1185a9018129 // indirect
-	golang.org/x/sys v0.0.0-20220712014510-0a85c31ab51e // indirect
+	golang.org/x/net v0.0.0-20220722155237-a158d28d115b // indirect
+	golang.org/x/sys v0.0.0-20220722155257-8c9f86f7a55f // indirect
 	golang.org/x/text v0.3.7 // indirect
 	golang.org/x/time v0.0.0-20220609170525-579cf78fd858 // indirect
-	golang.org/x/tools v0.1.11 // indirect
+	golang.org/x/tools v0.1.12 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20220712132514-bdd2acd4974d // indirect
 	google.golang.org/grpc v1.48.0 // indirect
