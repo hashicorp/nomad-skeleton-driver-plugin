@@ -1,7 +1,7 @@
 // TODO: update the module path below to match your own repository
 module github.com/hashicorp/nomad-skeleton-driver-plugin
 
-go 1.20
+go 1.21
 
 require (
 	github.com/hashicorp/consul-template v0.31.0
