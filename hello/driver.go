@@ -452,7 +452,7 @@ func (d *HelloDriverPlugin) RecoverTask(handle *drivers.TaskHandle) error {
 		return fmt.Errorf("failed to build ReattachConfig from taskConfig state: %v", err)
 	}
 
-	execImpl, pluginClient, err := executor.ReattachToExecutor(plugRC, d.logger)
+	execImpl, pluginClient, err := executor.ReattachToExecutor(plugRC, d.logger, d.nomadConfig.Topology.Compute())
 	if err != nil {
 		return fmt.Errorf("failed to reattach to executor: %v", err)
 	}
