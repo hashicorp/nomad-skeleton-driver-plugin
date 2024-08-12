@@ -56,6 +56,12 @@ import (
 
 ```
 
+> [!IMPORTANT]
+> If your plugin imports `hashicorp/nomad` package, you may want to consult
+> Nomad's top-level
+> [`go.mod`](https://github.com/hashicorp/nomad/blob/main/go.mod) file to see if
+> there aren't any "replace" directives that your package may also need.
+
 Build the skeleton plugin.
 
 ```sh
