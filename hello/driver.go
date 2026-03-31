@@ -386,6 +386,7 @@ func (d *HelloDriverPlugin) StartTask(cfg *drivers.TaskConfig) (*drivers.TaskHan
 		Args:       []string{"-c", echoCmd},
 		StdoutPath: cfg.StdoutPath,
 		StderrPath: cfg.StderrPath,
+		Resources:  cfg.Resources,
 	}
 
 	ps, err := exec.Launch(execCmd)
