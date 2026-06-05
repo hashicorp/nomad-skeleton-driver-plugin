@@ -179,26 +179,20 @@ type HelloDriverPlugin struct {
 	// coordinate shutdown
 	ctx context.Context
 
-	// signalShutdown is called when the driver is shutting down and cancels
-	// the ctx passed to any subsystems
-	signalShutdown context.CancelFunc
-
 	// logger will log to the Nomad agent
 	logger hclog.Logger
 }
 
 // NewPlugin returns a new example driver plugin
-func NewPlugin(logger hclog.Logger) drivers.DriverPlugin {
-	ctx, cancel := context.WithCancel(context.Background())
+func NewPlugin(ctx context.Context, logger hclog.Logger) drivers.DriverPlugin {
 	logger = logger.Named(pluginName)
 
 	return &HelloDriverPlugin{
-		eventer:        eventer.NewEventer(ctx, logger),
-		config:         &Config{},
-		tasks:          newTaskStore(),
-		ctx:            ctx,
-		signalShutdown: cancel,
-		logger:         logger,
+		eventer: eventer.NewEventer(ctx, logger),
+		config:  &Config{},
+		tasks:   newTaskStore(),
+		ctx:     ctx,
+		logger:  logger,
 	}
 }
 
