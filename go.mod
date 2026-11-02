@@ -30,7 +30,7 @@ require (
 	github.com/bgentry/speakeasy v0.2.0 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/checkpoint-restore/go-criu/v7 v7.2.0 // indirect
-	github.com/cilium/ebpf v0.18.0 // indirect
+	github.com/cilium/ebpf v0.22.0 // indirect
 	github.com/container-storage-interface/spec v1.12.0 // indirect
 	github.com/containerd/console v1.0.5 // indirect
 	github.com/coreos/go-systemd/v22 v22.6.0 // indirect
@@ -130,7 +130,7 @@ require (
 	github.com/shoenig/go-m1cpu v0.1.7 // indirect
 	github.com/shoenig/test v1.12.2 // indirect
 	github.com/shopspring/decimal v1.4.0 // indirect
-	github.com/sirupsen/logrus v1.9.3 // indirect
+	github.com/sirupsen/logrus v1.9.4 // indirect
 	github.com/spf13/cast v1.7.1 // indirect
 	github.com/stretchr/objx v0.5.2 // indirect
 	github.com/stretchr/testify v1.11.1 // indirect
